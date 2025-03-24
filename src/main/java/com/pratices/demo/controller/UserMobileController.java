@@ -26,7 +26,11 @@ public class UserMobileController {
 	public ResponseEntity<UserMobileDetailes> saveUser(@RequestBody UserMobileDetailes userMobileDetailes) throws WriterException, IOException{
 		UserMobileDetailes savedUser = userMobileService.saveUserWithQRCode(userMobileDetailes);
 	    int p=20;
+	    int p1=20;
+	    int p2=20;
 	    System.out.print(p);
+	    System.out.print(p1);
+	    System.out.print(p2);
 		return ResponseEntity.ok(userMobileDetailes);
 		
 	}
