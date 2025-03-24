@@ -25,10 +25,12 @@ public class UserMobileController {
 	@PostMapping("/mobileusersave")
 	public ResponseEntity<UserMobileDetailes> saveUser(@RequestBody UserMobileDetailes userMobileDetailes) throws WriterException, IOException{
 		UserMobileDetailes savedUser = userMobileService.saveUserWithQRCode(userMobileDetailes);
+	    int p=20;
+	    System.out.print(p);
 		return ResponseEntity.ok(userMobileDetailes);
 		
 	}
-	 @GetMapping("/qr/{id}")
+	 /*@GetMapping("/qr/{id}")
 	    public ResponseEntity<byte[]> getQRCode(@PathVariable Long id) {
 	        Optional<UserMobileDetailes> user = userMobileService.getUserById(id);
 
@@ -39,6 +41,6 @@ public class UserMobileController {
 	                    .body(user.get().getQrCode());
 	        }
 	        return ResponseEntity.notFound().build();
-	    }
+	    }*/
 
 }
